@@ -22,24 +22,24 @@ export default function SharedFiles() {
   useEffect(() => {
     const shared = [];
     // Also include a few premium mock shared files so it looks premium
-    shared.push({
-      _id: 'mock-shared-1',
-      originalName: 'Project Specifications.pdf',
-      mimeType: 'application/pdf',
-      extension: 'pdf',
-      size: 4500000,
-      createdAt: new Date().toISOString(),
-      ownerName: 'Sarah Connor',
-    });
-    shared.push({
-      _id: 'mock-shared-2',
-      originalName: 'Intro Video Presentation.mp4',
-      mimeType: 'video/mp4',
-      extension: 'mp4',
-      size: 24500000,
-      createdAt: new Date().toISOString(),
-      ownerName: 'James Cameron',
-    });
+    // shared.push({
+    //   _id: 'mock-shared-1',
+    //   originalName: 'Project Specifications.pdf',
+    //   mimeType: 'application/pdf',
+    //   extension: 'pdf',
+    //   size: 4500000,
+    //   createdAt: new Date().toISOString(),
+    //   ownerName: 'Sarah Connor',
+    // });
+    // shared.push({
+    //   _id: 'mock-shared-2',
+    //   originalName: 'Intro Video Presentation.mp4',
+    //   mimeType: 'video/mp4',
+    //   extension: 'mp4',
+    //   size: 24500000,
+    //   createdAt: new Date().toISOString(),
+    //   ownerName: 'James Cameron',
+    // });
 
     // Scan localStorage keys
     for (let i = 0; i < localStorage.length; i++) {

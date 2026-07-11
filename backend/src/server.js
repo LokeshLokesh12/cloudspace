@@ -10,6 +10,7 @@ const startServer = async () => {
   await connectDB();
   ensureUploadsDir();
 
+  
   const app = createApp();
   const server = http.createServer(app);
 

@@ -23,14 +23,14 @@ export default function Favorites() {
     const favs = [];
     
     // Add default mock favorite
-    favs.push({
-      _id: 'mock-fav-1',
-      originalName: 'Financial Report 2026.xlsx',
-      mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-      extension: 'xlsx',
-      size: 1540000,
-      createdAt: new Date().toISOString(),
-    });
+    // favs.push({
+    //   _id: 'mock-fav-1',
+    //   originalName: 'Financial Report 2026.xlsx',
+    //   mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    //   extension: 'xlsx',
+    //   size: 1540000,
+    //   createdAt: new Date().toISOString(),
+    // });
 
     // Check localStorage for user favorited files
     for (let i = 0; i < localStorage.length; i++) {

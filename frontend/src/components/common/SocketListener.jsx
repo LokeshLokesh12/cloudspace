@@ -104,7 +104,8 @@ export default function SocketListener() {
       // Disconnect socket on logout/unmount
       socketService.disconnect();
     };
-  }, [isAuthenticated, token, currentFolderId, dispatch]);
+  // }, [isAuthenticated, token, currentFolderId, dispatch]);
+  }, [isAuthenticated, token, dispatch]);
 
   return null; // Side-effect rendering only
 }

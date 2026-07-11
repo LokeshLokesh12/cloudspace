@@ -20,6 +20,7 @@ export default function Sidebar() {
 
   useEffect(() => {
     dispatch(fetchStorageInfo());
+
   }, [dispatch]);
 
   const navItems = [
@@ -115,19 +116,20 @@ export default function Sidebar() {
         <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-2 mb-2 overflow-hidden">
           <div
             className={`h-full rounded-full transition-all duration-300 ${
-              storageInfo.percentage > 90
+              storageInfo.usagePercent > 90
                 ? 'bg-red-500'
-                : storageInfo.percentage > 70
+                : storageInfo.usagePercent > 70
                 ? 'bg-yellow-500'
                 : 'bg-blue-600'
             }`}
-            style={{ width: `${Math.min(100, storageInfo.percentage)}%` }}
-          ></div>
+            style={{ width: `${Math.min(100, storageInfo.usagePercent)}%` }}
+            ></div>
+            {console.log(storageInfo.usagePercent)}
         </div>
 
         <div className="flex justify-between items-center text-xs text-slate-600 dark:text-slate-400">
           <span>{formatBytes(storageInfo.storageUsed)} / {formatBytes(storageInfo.storageLimit)}</span>
-          <span className="font-semibold">{storageInfo.percentage}%</span>
+          <span className="font-semibold">{storageInfo.usagePercent}%</span>
         </div>
 
         <button
